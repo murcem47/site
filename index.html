@@ -1,0 +1,119 @@
+---
+layout: default
+title: colepaws
+description: Gamer, nerd, and data hoarder.
+
+pronouns: she/her
+location: Huntsville, Alabama
+
+github: colepaws
+discord: 1030632330676682823
+telegram: colepaws
+twitter: colepaws
+email: contact@colepaws.pet
+steam: colepaws
+pubkey: colepaws-pubkey.asc
+---
+
+<title>{{ page.title }}</title>
+
+<header>
+  <h1 class="header-title" id="name">{{ page.title }}</h1>
+  <span id="pronouns">({{ page.pronouns }})</span>
+  <p class="header-description">{{ page.description }}</p>
+  <ul class="header-links">
+    <li>
+      <a href="/blog/" title="Blog">Blog</a>
+    </li>
+    <li>
+      <a href="https://github.com/{{ page.github }}" title="GitHub" target="_blank" rel="noreferrer">GitHub</a>
+    </li>
+    <li>
+      <a href="https://discord.com/users/{{ page.discord }}" title="Discord" target="_blank"
+        rel="noreferrer">Discord</a>
+    </li>
+    <li>
+      <a href="https://steamcommunity.com/id/{{ page.steam }}" title="Steam" target="_blank" rel="noreferrer">Steam</a>
+    </li>
+    <li>
+      <a href="https://t.me/{{ page.telegram }}" title="Telegram" target="_blank" rel="noreferrer">Telegram</a>
+    </li>
+    <li>
+      <a href="https://x.com/{{ page.twitter }}" title="X/Twitter" target="_blank" rel="noreferrer">X/Twitter</a>
+    </li>
+    <li>
+      <a href="{{ site.baseurl }}/assets/{{ page.pubkey }}" title="PGP Pubkey" target="_blank" rel="noreferrer">PGP
+        Pubkey</a>
+    </li>
+    <li id="last-item">
+      <a href="mailto:{{ page.email }}" title="Email" target="_blank" rel="noreferrer">Email</a>
+    </li>
+  </ul>
+</header>
+
+<main>
+  <!-- List of post -->
+  <h2 class="title">Latest Post</h2>
+  <div id="post-list">
+    {% for post in site.posts limit:1 %}
+    <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+    <p class="post-description">{{ post.description }}</p>
+    <p class="post-date">{{ post.date | date: "%B %d, %Y" }} by {{ post.author }}</p>
+    <hr />
+    {% endfor %}
+  </div>
+
+  <!-- About -->
+  <div id="about">
+    <h2 class="title">About</h2>
+    <p>
+      I'm a 20-year-old trans student attending a local community college that loves to travel. Bouncing between houses
+      due to childhood struggles,
+      I've been all over the place and I have seen so many new things and new people. I'm a very social person at heart,
+      and love to sit down and have a chat.
+      I've been happily and healthily transitioning since May 17th, 2024, and I have become the happiest version of
+      myself.
+    </p>
+
+    <p>
+      Ever since I was young enough to crawl to a computer, I would completely immerse myself in video games. Be it from
+      the PlayStation 2, to good ol'
+      Quake 3 Arena, I'm no stranger to gaming. As rusty as I am now, gaming has always been my main hobby. I mainly
+      play
+      <a href="https://wizard101.com/" target="blank" rel="noreferrer">Wizard101</a>, as it's one of my favorite
+      MMORPGs.
+    </p>
+
+    <p>
+      As of now, outside of doing my schoolwork and gaming, I'm attempting to learn sysadmin work, as that's what I
+      truly want to do in life. I'm also
+      attempting to learn some programming, as I plan on making my own video game in the future.
+    </p>
+
+    <p>
+      Some of my other hobbies are archiving high quality anime encodes, reading manga, and watching anime.
+    </p>
+  </div>
+
+  <!-- List of projects -->
+  <h2 class="title">Projects</h2>
+  <div id="post-list">
+    {% for project in site.projects %}
+    <a class="post-title" href="{{ project.link }}">{{ project.name }}</a>
+    <p class="post-description">{{ project.description }}</p>
+    <em class="post-date">{{ project.technologies }}</em>
+    <hr />
+    {% endfor %}
+  </div>
+
+  <!-- List of projects -->
+  <h2 class="title">Webring</h2>
+  <div id="webring-list">
+    {% for ring in site.webring %}
+    <a href="{{ ring.link }}" title="{{ ring.name }}" class="webring-image" target="_blank" rel="noreferrer">
+      <img src="{{ site.baseurl }}/assets/images/webring/{{ ring.file }}" alt="{{ ring.name }}" title="{{ ring.name }}"
+        width="88px" height="31px" />
+    </a>
+    {% endfor %}
+  </div>
+</main>
