@@ -1,7 +1,7 @@
-title: colepaws
+title: adwm
 permalink: /blog/:year/:title/
 logo: /assets/images/favicon.png
-url: https://colepaws.pet
+url: https://murcem47.github.io
 
 collections:
   - projects
