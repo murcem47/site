@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Cole's Notebook
-description: Posts about whatever nerdy stuff I can think of.
+title: adwm's posts
+description: postss.,
 ---
 
 <header>
@@ -12,10 +12,10 @@ description: Posts about whatever nerdy stuff I can think of.
       <a href="#" onclick="window.history.back()" title="Back">Back</a>
     </li>
     <li>
-      <a href="/feed.xml" title="RSS">RSS</a>
+      <a href="/site/feed.xml" title="RSS">RSS</a>
     </li>
     <li id="last-item">
-      <a href="/" title="Go home">Home</a>
+      <a href="/site" title="Go home">Home</a>
     </li>
   </ul>
 </header>
@@ -25,7 +25,7 @@ description: Posts about whatever nerdy stuff I can think of.
   <h2 class="title">Pages</h2>
   <div id="post-list">
     {% for post in paginator.posts %}
-    <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+    <a class="post-title" href="/site{{ post.url }}">{{ post.title }}</a>
     <p class="post-description">{{ post.description }}</p>
     <p class="post-date">{{ post.date | date: "%B %d, %Y" }} by {{ post.author }}</p>
     <hr />
